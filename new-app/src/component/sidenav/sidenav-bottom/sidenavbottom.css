@@ -1,0 +1,13 @@
+.sidenavbottom{
+    display: flex;
+    color: antiquewhite;
+    width: 192px;
+    height: 54px;
+    background-color: #353c53;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 13px;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+}

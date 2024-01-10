@@ -1,0 +1,13 @@
+.sidenavtop{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    
+    
+}
+
+.sidenames{
+    display: flex;
+    margin:10px;
+    cursor: pointer;
+}
