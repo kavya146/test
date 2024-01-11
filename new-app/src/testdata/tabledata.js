@@ -1,4 +1,4 @@
-const dummydata = [
+export const dummydata = [
   {
     orderId: 281209,
     status: "Successful",
@@ -29,4 +29,17 @@ const dummydata = [
   },
 ];
 
-export default dummydata;
+export const overview = {
+  netPay: {
+    pay: "2,312.23",
+    orders: 23,
+    date: "Today, 04:00 PM",
+  },
+  amountPending: {
+    pay: "92,321.20",
+    orders: 13,
+  },
+  amountProcessed: "23,92,312.19",
+  totalpayout: 22,
+  totalrefunds: 6,
+};

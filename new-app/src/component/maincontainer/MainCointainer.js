@@ -2,8 +2,7 @@ import "./maincontainer.css";
 import Header from "./header/Header";
 import Overview from "./overview/Overview";
 import TableContainerMain from "./tablecontainer/TableContainerMain";
-import searchlogo from "../maincontainer/header/searchlogo.svg";
-import sort from "./sort.svg";
+import { overview } from "../../testdata/tabledata";
 const MainContainer = () => {
   return (
     <div className="maincontainer">
@@ -26,9 +25,10 @@ const MainContainer = () => {
               padding: "10px 16px",
               textAlign: "center",
               marginRight: "30px",
+              cursor: "pointer",
             }}
           >
-            Payouts (22)
+            Payouts ({overview.totalpayout})
           </span>
         </div>
         <div style={{ cursor: "pointer" }}>
@@ -44,38 +44,8 @@ const MainContainer = () => {
               color: "white",
             }}
           >
-            Refunds (6)
+            Refunds ({overview.totalrefunds})
           </span>
-        </div>
-      </div>
-
-      <div
-        style={{
-          margin: "10px 70px 10px 40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <div>
-          <img
-            style={{ position: "relative", left: "50px" }}
-            src={searchlogo}
-          />
-          <input
-            style={{
-              width: "400px",
-              height: "40px",
-              textAlign: "center",
-              margin: "10px",
-              borderRadius: "6px",
-            }}
-            type="text"
-            placeholder="Order ID or transaction ID"
-          />
-        </div>
-        <div>
-          <img src={sort} />
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import "./overview.css";
 import questionmark from "./qustion.svg";
 import questionmarkb from "./questionb.svg";
+import { overview } from "../../../testdata/tabledata";
 
 function Overview() {
   return (
@@ -54,10 +55,11 @@ function Overview() {
             }}
           >
             <h1>
-              <span>&#8377;</span>2,312.23
+              <span>&#8377;</span>
+              {overview.netPay.pay}
             </h1>
             <a href="#" style={{ color: "white" }}>
-              23 Orders{" "}
+              {overview.netPay.orders} Orders{" "}
             </a>
           </div>
           <div
@@ -71,7 +73,7 @@ function Overview() {
             }}
           >
             <div style={{ marginLeft: "20px" }}>Net payout date:</div>
-            <div style={{ marginRight: "20px" }}>Today, 04:00PM</div>
+            <div style={{ marginRight: "20px" }}>{overview.netPay.date}</div>
           </div>
         </div>
 
@@ -99,12 +101,13 @@ function Overview() {
             }}
           >
             <h1 style={{ marginLeft: "20px" }}>
-              <span>&#8377;</span>92,321.20
+              <span>&#8377;</span>
+              {overview.amountPending.pay}
             </h1>
             <h2>
               {" "}
               <a href="#" style={{ marginRight: "20px", color: "black" }}>
-                13 Orders{" "}
+                {overview.amountPending.orders} Orders{" "}
               </a>
             </h2>
           </div>
@@ -128,7 +131,8 @@ function Overview() {
           </div>
           <div>
             <h1 style={{ marginLeft: "20px" }}>
-              <span>&#8377;</span>23,92,312.19
+              <span>&#8377;</span>
+              {overview.amountProcessed}
             </h1>
           </div>
         </div>
