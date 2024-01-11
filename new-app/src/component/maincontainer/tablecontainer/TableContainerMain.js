@@ -2,11 +2,13 @@ import success from "./success.svg";
 import process from "./process.svg";
 import { dummydata } from "../../../testdata/tabledata";
 import searchlogo from "../header/searchlogo.svg";
-import sort from "../sort.svg";
+import download from "./download.svg";
+import sortbutton from "./sortbutton.svg";
 import { useState } from "react";
 
 const TableContainerMain = () => {
   const [data, setData] = useState(dummydata);
+  const [asc, setAsc] = useState(true);
   return (
     <>
       <div
@@ -50,7 +52,27 @@ const TableContainerMain = () => {
           />
         </div>
         <div>
-          <img src={sort} />
+          <img
+            onClick={() => {
+              if (asc) {
+                dummydata.sort((a, b) => {
+                  return a.orderId - b.orderId;
+                });
+                setAsc(false);
+              } else {
+                dummydata.sort((a, b) => {
+                  return b.orderId - a.orderId;
+                });
+                setAsc(true);
+              }
+
+              const newData = [...dummydata];
+              setData(newData);
+            }}
+            style={{ cursor: "pointer" }}
+            src={sortbutton}
+          />
+          <img style={{ cursor: "pointer" }} src={download} />
         </div>
       </div>
       <div style={{ margin: "0px 70px 0px 70px", border: "5px" }}>
