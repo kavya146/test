@@ -1,0 +1,6 @@
+.maincontainer{
+    height: 100vh;
+    width: calc(100vw - 224px);
+    background-color:  #F2F2F2;
+    
+}

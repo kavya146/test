@@ -1,0 +1,12 @@
+.overview{
+   height: 30vh;
+   width: 100%;  
+}
+
+.overviewhead{
+    height:5vh;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+}
