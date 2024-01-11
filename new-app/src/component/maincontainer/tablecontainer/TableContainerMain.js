@@ -1,3 +1,7 @@
+import dummydata from "../../../testdata/tabledata";
+import success from "./success.svg";
+import process from "./process.svg";
+
 const TableContainerMain = () => {
   return (
     <div style={{ margin: "0px 70px 0px 70px", border: "5px" }}>
@@ -11,13 +15,32 @@ const TableContainerMain = () => {
           <th>Refund date</th>
           <th>Order amount</th>
         </tr>
-        <tr style={{ height: "50px" }}>
-          <td>#2234565</td>
-          <td>Successful</td>
-          <td>1234567765456</td>
-          <td>Today, 08:45 PM</td>
-          <td>23556.34</td>
-        </tr>
+        {dummydata.map((val, key) => (
+          <tr
+            style={{
+              height: "50px",
+              borderBottomWidth: "2px",
+              borderBottomStyle: "groove",
+              borderBottomColor: "grey",
+            }}
+          >
+            <td>#{val.orderId}</td>
+            <td>
+              {val.status === "Successful" ? (
+                <img src={success} />
+              ) : (
+                <img src={process} />
+              )}{" "}
+              {val.status}
+            </td>
+            <td>{val.transactionId}</td>
+            <td>{val.refundDate}</td>
+            <td>
+              <span>&#8377;</span>
+              {val.orderAmount}
+            </td>
+          </tr>
+        ))}
       </table>
     </div>
   );
