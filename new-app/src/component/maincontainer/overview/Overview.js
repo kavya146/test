@@ -54,10 +54,10 @@ function Overview() {
               alignItems: "center",
             }}
           >
-            <h1>
+            <h3>
               <span>&#8377;</span>
               {overview.netPay.pay}
-            </h1>
+            </h3>
             <a href="#" style={{ color: "white" }}>
               {overview.netPay.orders} Orders{" "}
             </a>
@@ -100,16 +100,16 @@ function Overview() {
               alignItems: "center",
             }}
           >
-            <h1 style={{ marginLeft: "20px" }}>
+            <h3 style={{ marginLeft: "20px" }}>
               <span>&#8377;</span>
               {overview.amountPending.pay}
-            </h1>
-            <h2>
+            </h3>
+            <h3>
               {" "}
               <a href="#" style={{ marginRight: "20px", color: "black" }}>
                 {overview.amountPending.orders} Orders{" "}
               </a>
-            </h2>
+            </h3>
           </div>
         </div>
 
@@ -130,10 +130,10 @@ function Overview() {
             <img style={{ color: "white" }} src={questionmarkb} />
           </div>
           <div>
-            <h1 style={{ marginLeft: "20px" }}>
+            <h3 style={{ marginLeft: "20px" }}>
               <span>&#8377;</span>
               {overview.amountProcessed}
-            </h1>
+            </h3>
           </div>
         </div>
       </div>
